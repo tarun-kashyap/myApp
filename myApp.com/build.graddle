@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+version = '1.0'
+ 
+// Uses JDK 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+ 
+ 
+
+repositories {
+	flatDir {
+       dirs 'lib'
+   }
+}
+ 
+//Project dependencies
+dependencies {
+
+}

@@ -1,0 +1,20 @@
+INSERT INTO
+		CATEGORY_ASC
+		(
+			ID_CGY_CHLD, ID_CGY_PRNT, CAT_ID
+		)
+		VALUES
+		(
+			2, 1, 1
+		);
+	
+INSERT INTO
+		CATEGORY_ASC
+		(
+			ID_CGY_CHLD, ID_CGY_PRNT, CAT_ID
+		)
+		VALUES
+		(
+			3, 1, 1
+		);
+		

@@ -1,0 +1,8 @@
+CREATE TABLE
+	LOCATION
+	(
+		LOC_ID INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'location id sequence',
+		LOC_DESC VARCHAR(200) COMMENT 'description of location',
+		LOC_NM VARCHAR(100) NOT NULL COMMENT 'location name',
+		PRIMARY KEY (LOC_ID)
+	);
