@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import main.java.hello.AbstractDatabaseIfc;
+import main.java.AbstractDatabaseIfc;
 
 
 
