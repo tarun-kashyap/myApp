@@ -1,0 +1,5 @@
+include 'domain'
+include 'entities'
+include 'managers'
+include 'myApp.com'
+include 'services'

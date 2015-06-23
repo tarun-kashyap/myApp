@@ -1,9 +1,9 @@
 /**
  * 
  */
-package main.java.order;
+package order;
 
-import main.java.domain.Order;
+import domain.Order;
 
 import org.springframework.stereotype.Component;
 

@@ -1,14 +1,14 @@
 /**
  * 
  */
-package main.java.service;
+package service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import main.java.entity.User;
-import main.java.dao.UserDAO;
-import main.java.domain.SearchCriteria;
+import entity.User;
+import dao.UserDAO;
+import domain.SearchCriteria;
 
 /**
  * @author dev

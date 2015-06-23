@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.com.myApp.validator;
+package com.myApp.validator;
 
 /**
  * @author dev

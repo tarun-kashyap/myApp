@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.promotion;
+package promotion;
 
 import org.springframework.stereotype.Component;
 

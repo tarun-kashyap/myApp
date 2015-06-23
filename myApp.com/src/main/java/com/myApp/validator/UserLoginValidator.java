@@ -1,9 +1,9 @@
 /**
  * 
  */
-package main.java.com.myApp.validator;
+package com.myApp.validator;
 
-import main.java.com.myApp.form.UserLoginForm;
+import com.myApp.form.UserLoginForm;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;

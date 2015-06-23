@@ -1,11 +1,11 @@
 /**
  * 
  */
-package main.java.location;
+package location;
 
 import java.util.List;
 
-import main.java.entity.Location;
+import entity.Location;
 
 import org.springframework.stereotype.Component;
 

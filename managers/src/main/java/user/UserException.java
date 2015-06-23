@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.user;
+package user;
 
 /**
  * @author dev

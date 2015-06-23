@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.com.myApp.form;
+package com.myApp.form;
 
 /**
  * @author dev

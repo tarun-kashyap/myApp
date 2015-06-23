@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.catalog;
+package catalog;
 
 import org.springframework.stereotype.Component;
 

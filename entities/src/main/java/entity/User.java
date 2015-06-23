@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.entity;
+package entity;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -19,7 +19,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import main.java.AbstractDatabaseIfc;
+import constants.AbstractDatabaseIfc;
 
 
 

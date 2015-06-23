@@ -1,4 +1,4 @@
-package main.java.entity;
+package entity;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
-import main.java.AbstractDatabaseIfc;
+import constants.AbstractDatabaseIfc;
 
 
 @Entity

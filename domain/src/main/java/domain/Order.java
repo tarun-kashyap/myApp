@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.domain;
+package domain;
 
 /**
  * @author dev

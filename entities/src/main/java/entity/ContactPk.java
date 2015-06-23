@@ -1,14 +1,14 @@
 /**
  * 
  */
-package main.java.entity;
+package entity;
 
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-import main.java.AbstractDatabaseIfc;
+import constants.AbstractDatabaseIfc;
 
 /**
  * @author dev

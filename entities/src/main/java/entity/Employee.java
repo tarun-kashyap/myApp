@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.entity;
+package entity;
 
 /**
  * @author dev

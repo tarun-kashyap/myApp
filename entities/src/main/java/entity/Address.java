@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.entity;
+package entity;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import main.java.AbstractDatabaseIfc;
+import constants.AbstractDatabaseIfc;
 
 /**
  * @author dev

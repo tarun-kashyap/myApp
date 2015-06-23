@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.com.myApp.controller;
+package com.myApp.controller;
 
 /**
  * @author dev

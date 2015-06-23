@@ -1,12 +1,12 @@
 /**
  * 
  */
-package main.java.service;
+package service;
 
 import java.util.List;
 
-import main.java.domain.SearchCriteria;
-import main.java.entity.User;
+import domain.SearchCriteria;
+import entity.User;
 
 
 /**

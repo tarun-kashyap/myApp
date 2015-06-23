@@ -1,9 +1,9 @@
 /**
  * 
  */
-package main.java.com.myApp.validator;
+package com.myApp.validator;
 
-import main.java.com.myApp.form.OrderCreateForm;
+import com.myApp.form.OrderCreateForm;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
