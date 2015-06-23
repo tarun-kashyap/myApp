@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="/home/dev/Downloads/spring-framework-4.1.6.RELEASE/libs/spring-core-4.1.6.RELEASE.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/domain"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/services"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/entities"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

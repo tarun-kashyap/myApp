@@ -3,32 +3,27 @@
  */
 package main.java.service;
 
-import main.java.dao.UserDAO;
+import java.util.List;
+
+import main.java.domain.SearchCriteria;
 import main.java.entity.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /**
  * @author dev
  *
  */
-@Component
-public class UserService {
+public interface UserService {
 
-	private UserDAO userDAO;
 
-	public UserDAO getUserDAO() {
-		return userDAO;
-	}
-
-	@Autowired
-	public void setUserDAO(UserDAO userDAO) {
-		this.userDAO = userDAO;
-	}
+	public void addUser(User user);
 	
-	public void addUser(User user)
-	{
-		getUserDAO().insert(user);
-	}
+	public List<User> search(SearchCriteria criteria);
+	
+	public void activate(User user);
+	
+	public void deActivate(User user);
+	
+	public void updateUser(User user);
+	
 }

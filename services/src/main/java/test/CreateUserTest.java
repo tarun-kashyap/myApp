@@ -21,7 +21,7 @@ public class CreateUserTest {
 		ApplicationContext context = new ClassPathXmlApplicationContext("main/resources/spring-config.xml");
 		UserService userService = (UserService) context.getBean("userService");
 		User user = new User();
-		user.setUserId("tksharma");
+		//user.setUserId("tksharma");
 		user.setFirstName("Tarun");
 		user.setLastName("Sharma");
 		userService.addUser(user);

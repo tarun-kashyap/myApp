@@ -5,7 +5,8 @@ package main.java.user;
 
 import java.util.List;
 
-import main.java.domain.User;
+import main.java.domain.SearchCriteria;
+import main.java.entity.User;
 
 import org.springframework.stereotype.Component;
 
@@ -16,14 +17,14 @@ import org.springframework.stereotype.Component;
 @Component
 public interface UserManager {
 	
-	public void createUser(User user);
+	public boolean registerUser(User user) throws UserException;
 	
-	public List<User> getUser();
+	public List<User> searchUser(SearchCriteria criteria) throws UserException;
 	
-	public void deActiateUser(User user);
+	public void deActiateUser(User user) throws UserException;
 	
-	public void activateUser(User user);
+	public void activateUser(User user) throws UserException;
 	
-	public void updateUser(User user);
+	public void updateUser(User user) throws UserException;
 
 }

@@ -10,7 +10,7 @@ CREATE TABLE
 			GENDER Varchar(1) COMMENT 'M or F',
 			TS_CRT TIMESTAMP COMMENT 'created on date',
 			TS_MDF TIMESTAMP COMMENT 'last modified date',
-			MDTR_ID VARCHAR(10) COMMENT 'last modifier id',
+			MDFR_ID VARCHAR(10) COMMENT 'last modifier id',
 			STATUS VARCHAR(10)  COMMENT 'User Status- Inactive, Active',
 			TS_EF TIMESTAMP COMMENT 'Effective date',
 			TS_EP TIMESTAMP COMMENT 'Expiry Date',

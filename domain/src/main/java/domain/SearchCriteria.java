@@ -7,6 +7,6 @@ package main.java.domain;
  * @author dev
  *
  */
-public class Location {
+public class SearchCriteria {
 
 }

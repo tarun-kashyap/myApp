@@ -26,6 +26,8 @@ public class UserRegisterForm implements Serializable{
 	
 	public static final String PASSWORD_FIELD = "password";
 	
+	public static final String CONFIRM_PASSWORD_FIELD = "confirmPassword";
+	
 	
 	public static final String FULL_NAME_MISSING_MESSAGE = "error.fullname.missing";
 	
@@ -42,6 +44,8 @@ public class UserRegisterForm implements Serializable{
 	public static final String PHONE_FORMAT_MESSAGE = "error.phone.format";
 	
 	public static final String PASSWORD_FORMAT_MESSAGE = "error.password.format";
+	
+	public static final String PASSWORD_MISMATCH_MESSAGE = "error.password.mismatch";
 
 	private String fullName;
 	
@@ -52,6 +56,8 @@ public class UserRegisterForm implements Serializable{
 	private String phoneNumber;
 	
 	private String password;
+	
+	private String confirmPassword;
 	
 	/**
 	 * @return the fullName
@@ -121,6 +127,20 @@ public class UserRegisterForm implements Serializable{
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the confirmPassword
+	 */
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	/**
+	 * @param confirmPassword the confirmPassword to set
+	 */
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
 	}
 
 

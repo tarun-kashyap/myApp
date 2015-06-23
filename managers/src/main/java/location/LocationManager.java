@@ -5,7 +5,7 @@ package main.java.location;
 
 import java.util.List;
 
-import main.java.domain.Location;
+import main.java.entity.Location;
 
 import org.springframework.stereotype.Component;
 
