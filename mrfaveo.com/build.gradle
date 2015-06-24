@@ -26,8 +26,10 @@ dependencies {
 	compile project (':domain')
 	compile 'org.springframework:spring-webmvc:4.1.6.RELEASE',
 			'javax.validation:validation-api:1.1.0.Final',
-			'javax.servlet:javax.servlet-api:3.1.0'
-	
+			'javax.servlet:javax.servlet-api:3.1.0',
+			'org.apache.tiles:tiles-core:3.0.5',
+			'org.apache.tiles:tiles-jsp:3.0.5'
+				
 	testCompile 'junit:junit:4.11',
 				'org.mockito:mockito-core:1.9.5',
 				'org.springframework:spring-test:4.1.6.RELEASE'
