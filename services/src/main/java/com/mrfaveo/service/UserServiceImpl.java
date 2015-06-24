@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	/* (non-Javadoc)
-	 * @see main.java.service.UserService#addUser(main.java.domain.User)
+	 * @see com.mrfaveo.service.UserService#addUser(com.mrfaveo.domain.User)
 	 */
 	@Override
 	public void addUser(User user) {
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	/* (non-Javadoc)
-	 * @see main.java.service.UserService#search(main.java.domain.SearchCriteria)
+	 * @see com.mrfaveo.service.UserService#search(com.mrfaveo.domain.SearchCriteria)
 	 */
 	@Override
 	public List<User> search(SearchCriteria criteria) {
@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	/* (non-Javadoc)
-	 * @see main.java.service.UserService#activate(main.java.domain.User)
+	 * @see com.mrfaveo.service.UserService#activate(com.mrfaveo.domain.User)
 	 */
 	@Override
 	public void activate(User user) {
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	/* (non-Javadoc)
-	 * @see main.java.service.UserService#deActivate(main.java.domain.User)
+	 * @see com.mrfaveo.service.UserService#deActivate(com.mrfaveo.domain.User)
 	 */
 	@Override
 	public void deActivate(User user) {
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	/* (non-Javadoc)
-	 * @see main.java.service.UserService#updateUser(main.java.domain.User)
+	 * @see com.mrfaveo.service.UserService#updateUser(com.mrfaveo.domain.User)
 	 */
 	@Override
 	public void updateUser(User user) {
