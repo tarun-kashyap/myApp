@@ -2,6 +2,16 @@ apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'war'
 
+eclipse {
+ 
+  wtp {
+    component {
+      contextPath = 'app'
+    }
+ 
+  }
+}
+
 version = '1.0'
  
 // Uses JDK 8
