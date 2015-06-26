@@ -4,24 +4,29 @@ package com.mrfaveo.services.test;
  */
 
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.mrfaveo.service.UserService;
-
 import com.mrfaveo.entity.User;
 
 /**
  * @author dev
  *
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:/spring-config-services.xml"})
 public class CreateUserTest {
 
-	public static void main(String args[]) {
+	@Autowired
+	UserService userService;
+	@Test
+	public void testUserCreate() throws Exception{
 		System.out.println("************** BEGINNING PROGRAM **************");
-		 
-		ApplicationContext context = new ClassPathXmlApplicationContext("main/resources/spring-config.xml");
-		UserService userService = (UserService) context.getBean("userService");
+		
 		User user = new User();
 		//user.setUserId("tksharma");
 		user.setFirstName("Tarun");

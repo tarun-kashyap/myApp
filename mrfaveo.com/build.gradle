@@ -40,7 +40,6 @@ dependencies {
 			'org.apache.tiles:tiles-core:3.0.5',
 			'org.apache.tiles:tiles-jsp:3.0.5'
 				
-	testCompile 'junit:junit:4.11',
-				'org.mockito:mockito-core:1.9.5',
+	testCompile 'org.mockito:mockito-core:1.9.5',
 				'org.springframework:spring-test:4.1.6.RELEASE'
 }
