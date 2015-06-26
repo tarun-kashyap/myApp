@@ -31,6 +31,9 @@ public class CreateUserTest {
 		//user.setUserId("tksharma");
 		user.setFirstName("Tarun");
 		user.setLastName("Sharma");
+		user.setPassword("password");
+		user.setUserType("E");
+		user.setUserName("tarun.sharma");
 		userService.addUser(user);
 		System.out.println("User : " + user + " added successfully");
 		 
