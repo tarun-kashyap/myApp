@@ -4,6 +4,7 @@ package com.mrfaveo.services.test;
  */
 
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,13 @@ import com.mrfaveo.entity.User;
 @ContextConfiguration(locations={"classpath:/spring-config-services.xml"})
 public class CreateUserTest {
 
+	final static Logger logger = Logger.getLogger(CreateUserTest.class);
+	
 	@Autowired
 	UserService userService;
 	@Test
 	public void testUserCreate() throws Exception{
-		System.out.println("************** BEGINNING PROGRAM **************");
+		logger.debug("************** BEGINNING PROGRAM **************");
 		
 		User user = new User();
 		//user.setUserId("tksharma");
@@ -34,11 +37,13 @@ public class CreateUserTest {
 		user.setPassword("password");
 		user.setUserType("E");
 		user.setUserName("tarun.sharma");
-		userService.addUser(user);
-		System.out.println("User : " + user + " added successfully");
+		try {
+			userService.addUser(user);
+		} catch (Throwable e) {
+			logger.error("Exception occured ", e);
+		}
+		logger.debug("User : " + user + " added successfully");
 		 
-		
-		 
-		System.out.println("************** ENDING PROGRAM *****************");
+		logger.debug("************** ENDING PROGRAM *****************");
 	}
 }

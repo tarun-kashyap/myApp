@@ -26,8 +26,10 @@ compile project (':domain')
 compile 'org.springframework:spring-webmvc:4.1.6.RELEASE',
 	    'org.springframework:spring-orm:4.1.6.RELEASE',
 	    'org.hibernate:hibernate-entitymanager:4.3.10.Final',
+	    'log4j:log4j:1.2.17',
 		'mysql:mysql-connector-java:5.1.35'
 	
 	testCompile 'org.mockito:mockito-core:1.9.5',
-				'org.springframework:spring-test:4.1.6.RELEASE'
+				'org.springframework:spring-test:4.1.6.RELEASE',
+				'junit:junit:4.12'
 }
