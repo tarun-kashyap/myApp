@@ -24,7 +24,7 @@ public class Contact implements Serializable {
 	private static final long serialVersionUID = -4024904443708644300L;
 	
 	@EmbeddedId
-	private ContactPk id;
+	private ContactID id;
 	
 	@Column(name=AbstractDatabaseIfc.FIELD_CONTACT_TYPE)
 	private String contactType;
@@ -35,14 +35,14 @@ public class Contact implements Serializable {
 	/**
 	 * @return the id
 	 */
-	public ContactPk getId() {
+	public ContactID getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(ContactPk id) {
+	public void setId(ContactID id) {
 		this.id = id;
 	}
 

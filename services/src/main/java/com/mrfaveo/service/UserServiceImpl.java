@@ -6,7 +6,7 @@ package com.mrfaveo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.mrfaveo.entity.User;
 import com.mrfaveo.dao.UserDAO;
@@ -16,7 +16,7 @@ import com.mrfaveo.domain.SearchCriteria;
  * @author dev
  *
  */
-@Component
+@Service
 public class UserServiceImpl implements UserService {
 
 	private UserDAO userDAO;

@@ -24,6 +24,10 @@ public interface AbstractDatabaseIfc {
 	public static final String FIELD_USER_EFFECTIVE_TIMESTAMP = "TS_EF";
 	public static final String FIELD_USER_EXPIRATION_TIMESTAMP = "TS_EP";
 	
+	public static final String DISCRIMINATOR_USER_CUSTOMER = "CUST";
+	public static final String DISCRIMINATOR_USER_EMPLOYEE = "EMP";
+	public static final String DISCRIMINATOR_USER_PROFESSIONAL = "PROF";
+	
 	public static final String TABLE_CUSTOMER = "CUSTOMER";
 	public static final String FIELD_CUSTOMER_ID = "CUST_ID";
 	

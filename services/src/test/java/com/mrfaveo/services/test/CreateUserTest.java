@@ -31,7 +31,6 @@ public class CreateUserTest {
 		logger.debug("************** BEGINNING PROGRAM **************");
 		
 		User user = new User();
-		//user.setUserId("tksharma");
 		user.setFirstName("Tarun");
 		user.setLastName("Sharma");
 		user.setPassword("password");

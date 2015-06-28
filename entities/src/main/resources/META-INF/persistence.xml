@@ -4,8 +4,13 @@ version="1.0">
 <persistence-unit name="myApp" transaction-type="RESOURCE_LOCAL" >
  <provider>org.hibernate.ejb.HibernatePersistence</provider>
 <class>com.mrfaveo.entity.User</class>
+<class>com.mrfaveo.entity.Customer</class>
+<class>com.mrfaveo.entity.Employee</class>
+<class>com.mrfaveo.entity.ServiceProfessional</class>
 <class>com.mrfaveo.entity.Address</class>
+<class>com.mrfaveo.entity.AddressID</class>
 <class>com.mrfaveo.entity.Contact</class>
+<class>com.mrfaveo.entity.ContactID</class>
 <properties>
         <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
         <property name="hibernate.connection.url" value="jdbc:mysql://localhost/dev"/>

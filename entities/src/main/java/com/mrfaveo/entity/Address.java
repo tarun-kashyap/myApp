@@ -24,7 +24,7 @@ public class Address implements Serializable{
 	private static final long serialVersionUID = -4726060810837347831L;
 	
 	@EmbeddedId
-	private AddressPk id;
+	private AddressID id;
 	
 	@Column(name=AbstractDatabaseIfc.FIELD_ADDRESS_LINE1)
 	private String addressLine1;
@@ -47,14 +47,14 @@ public class Address implements Serializable{
 	/**
 	 * @return the id
 	 */
-	public AddressPk getId() {
+	public AddressID getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(AddressPk id) {
+	public void setId(AddressID id) {
 		this.id = id;
 	}
 

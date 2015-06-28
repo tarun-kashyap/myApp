@@ -15,21 +15,21 @@ import com.mrfaveo.constants.AbstractDatabaseIfc;
  *
  */
 @Embeddable
-public class ContactPk implements Serializable {
+public class AddressID implements Serializable {
 
 	/** serial version UID */
-	private static final long serialVersionUID = 7561747404337586825L;
+	private static final long serialVersionUID = -165394115418933343L;
 	
 	@Column(name=AbstractDatabaseIfc.FIELD_USER_USER_ID)
 	private long userId;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_CONTACT_ID)
-	private long contactId;
+	@Column(name=AbstractDatabaseIfc.FIELD_ADDRESS_ID)
+	private long addressId;
 	
-	public ContactPk(long userId, long contactId)
+	public AddressID(long userId, long addressId)
 	{
 		this.userId = userId;
-		this.contactId = contactId;
+		this.addressId = addressId;
 	}
 
 	/**
@@ -47,33 +47,32 @@ public class ContactPk implements Serializable {
 	}
 
 	/**
-	 * @return the contactId
+	 * @return the addressId
 	 */
-	public long getContactId() {
-		return contactId;
+	public long getAddressId() {
+		return addressId;
 	}
 
 	/**
-	 * @param contactId the contactId to set
+	 * @param addressId the addressId to set
 	 */
-	public void setContactId(long contactId) {
-		this.contactId = contactId;
+	public void setAddressId(long addressId) {
+		this.addressId = addressId;
 	}
 	
 	@Override
 	public int hashCode() {
-		
-		return (int) (getUserId()+getContactId());
+		return (int) (getUserId()+getAddressId());
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj == null || !(obj instanceof ContactPk))
+		if(obj==null || !(obj instanceof AddressID))
 		{
 			return false;
 		}
-		ContactPk otherKey = (ContactPk) obj;
-		return (this.getUserId()== otherKey.getUserId() && this.getContactId() == otherKey.getContactId());
+		AddressID otherKey = (AddressID) obj;
+		return getUserId()== otherKey.getUserId() && getAddressId()==otherKey.getAddressId();
 	}
 
 }
