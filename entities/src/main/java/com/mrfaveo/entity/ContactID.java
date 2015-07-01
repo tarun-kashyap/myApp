@@ -31,6 +31,11 @@ public class ContactID implements Serializable {
 		this.userId = userId;
 		this.contactId = contactId;
 	}
+	
+	public ContactID()
+	{
+		
+	}
 
 	/**
 	 * @return the userId

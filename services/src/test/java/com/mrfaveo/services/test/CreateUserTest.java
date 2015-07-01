@@ -34,7 +34,6 @@ public class CreateUserTest {
 		user.setFirstName("Tarun");
 		user.setLastName("Sharma");
 		user.setPassword("password");
-		user.setUserType("E");
 		user.setUserName("tarun.sharma");
 		try {
 			userService.addUser(user);

@@ -31,6 +31,11 @@ public class AddressID implements Serializable {
 		this.userId = userId;
 		this.addressId = addressId;
 	}
+	
+	public AddressID()
+	{
+		
+	}
 
 	/**
 	 * @return the userId

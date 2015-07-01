@@ -3,7 +3,6 @@
  */
 package com.mrfaveo.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +17,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -35,60 +35,59 @@ import com.mrfaveo.constants.AbstractDatabaseIfc;
 @Table(name=AbstractDatabaseIfc.TABLE_USER)
 @Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorColumn(name=AbstractDatabaseIfc.FIELD_USER_USER_TYPE, discriminatorType=DiscriminatorType.STRING)
-public class User implements Serializable{
+public class User  extends GenericEntity{
 	
 	/** serial version UID */
 	private static final long serialVersionUID = -2280208465586751881L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_USER_ID)
+	@Column(name=FIELD_USER_USER_ID)
 	private long userId;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_USER_NAME)
+	@Column(name=FIELD_USER_USER_NAME)
 	private String userName;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_FIRST_NAME)
+	@Column(name=FIELD_USER_FIRST_NAME)
 	private String firstName;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_LAST_NAME)
+	@Column(name=FIELD_USER_LAST_NAME)
 	private String lastName;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_GENDER)
+	@Column(name=FIELD_USER_GENDER)
 	private String gender;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_USER_TYPE)
-	private String userType;
-	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_PASSWORD)
+	@Column(name=FIELD_USER_PASSWORD)
 	private String password;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_CREATION_TIMESTAMP)
+	@Column(name=FIELD_USER_CREATION_TIMESTAMP)
 	private Date creationTimestamp;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_MODIFIED_TIMESTAMP)
+	@Column(name=FIELD_USER_MODIFIED_TIMESTAMP)
 	private Date modifiedTimestamp;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_LAST_MODIFIER_ID)
+	@Column(name=FIELD_USER_LAST_MODIFIER_ID)
 	private String lastModifierId;
 	
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_STATUS)
+	@Column(name=FIELD_USER_STATUS)
 	private String status;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_EFFECTIVE_TIMESTAMP)
+	@Column(name=FIELD_USER_EFFECTIVE_TIMESTAMP)
 	private Date effectiveDate;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name=AbstractDatabaseIfc.FIELD_USER_EXPIRATION_TIMESTAMP)
+	@Column(name=FIELD_USER_EXPIRATION_TIMESTAMP)
 	private Date expirationDate;
 	
-	@OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL, targetEntity=Contact.class)
+	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name=FIELD_USER_USER_ID, referencedColumnName=FIELD_USER_USER_ID)
 	private List<Contact> contacts;
 	
-	@OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL, targetEntity=Address.class)
+	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name=FIELD_USER_USER_ID, referencedColumnName=FIELD_USER_USER_ID)
 	private List<Address> addresses;
 	
 	public long getUserId() {
@@ -141,20 +140,6 @@ public class User implements Serializable{
 	 */
 	public void setGender(String gender) {
 		this.gender = gender;
-	}
-
-	/**
-	 * @return the userType
-	 */
-	public String getUserType() {
-		return userType;
-	}
-
-	/**
-	 * @param userType the userType to set
-	 */
-	public void setUserType(String userType) {
-		this.userType = userType;
 	}
 
 	/**
@@ -313,14 +298,13 @@ public class User implements Serializable{
 	     }
 		User otherUser = (User) obj;
 		
-		return (this.getUserType().equals(otherUser.getUserType())
-				&& this.getUserName().equals(otherUser.getUserName()));
+		return (this.getUserName().equals(otherUser.getUserName()));
 	}
 	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(getFirstName()).append(getLastName()).append(getUserType());
+		sb.append(getFirstName()).append(getLastName());
 		return sb.toString();
 	}
 

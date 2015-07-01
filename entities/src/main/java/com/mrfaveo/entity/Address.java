@@ -3,8 +3,6 @@
  */
 package com.mrfaveo.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -18,7 +16,7 @@ import com.mrfaveo.constants.AbstractDatabaseIfc;
  */
 @Entity
 @Table(name=AbstractDatabaseIfc.TABLE_ADDRESS)
-public class Address implements Serializable{
+public class Address extends GenericEntity{
 
 	/** serial version UID */
 	private static final long serialVersionUID = -4726060810837347831L;

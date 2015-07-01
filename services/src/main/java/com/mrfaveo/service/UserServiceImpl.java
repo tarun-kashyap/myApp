@@ -17,7 +17,7 @@ import com.mrfaveo.domain.SearchCriteria;
  *
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends AbstractJPAService implements UserService {
 
 	private UserDAO userDAO;
 
